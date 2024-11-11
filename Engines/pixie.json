@@ -1,0 +1,59 @@
+{
+    "private" : false,
+    "nps"     : 2328212,
+    "source"  : "https://github.com/codemaniac/pixie/",
+
+    "build" : {
+        "path"      : "openbench",
+        "compilers" : ["clang++", "g++"],
+        "cpuflags"  : [],
+        "systems"   : ["Darwin", "Linux"]
+    },
+
+    "test_presets" : {
+
+        "default" : {
+            "base_branch"     : "main",
+            "book_name"       : "UHO_4060_v2.epd",
+            "test_bounds"     : "[0.00, 5.00]",
+            "test_confidence" : "[0.05, 0.05]",
+            "win_adj"         : "movecount=3 score=400",
+            "draw_adj"        : "movenumber=40 movecount=8 score=10"
+        },
+
+        "STC" : {
+            "both_options"      : "Threads=1 Hash=16",
+            "both_time_control" : "10.0+0.1",
+            "workload_size"     : 4
+        },
+
+        "LTC" : {
+            "both_options"      : "Threads=1 Hash=64",
+            "both_time_control" : "30.0+0.1",
+            "workload_size"     : 4
+        }
+    },
+
+    "tune_presets" : {
+
+        "default" : {
+            "book_name" : "UHO_4060_v2.epd",
+            "win_adj"   : "movecount=3 score=400",
+            "draw_adj"  : "movenumber=40 movecount=8 score=10"
+        }
+    },
+
+    "datagen_presets" : {
+
+        "default" : {
+            "win_adj"       : "None",
+            "draw_adj"      : "None",
+            "workload_size" : 4
+        },
+
+        "40k Nodes" : {
+            "both_options"      : "Threads=1 Hash=16",
+            "both_time_control" : "N=40000"
+        }
+    }
+}
