@@ -561,7 +561,7 @@ class PGNHelper:
     @staticmethod
     def slice_pgn_file(file):
 
-        with open(file) as pgn:
+        with open(file, 'a+') as pgn:
 
             while True:
 
