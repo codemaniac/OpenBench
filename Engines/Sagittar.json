@@ -7,7 +7,7 @@
         "path"      : "openbench",
         "compilers" : ["clang++", "g++"],
         "cpuflags"  : [],
-        "systems"   : ["Darwin", "Linux"]
+        "systems"   : ["Darwin", "Linux", "Windows"]
     },
 
     "test_presets" : {
