@@ -3,7 +3,7 @@
     "nps": 20000000,
     "source": "https://github.com/official-sagittar/Sagittar",
     "build": {
-        "path": "",
+        "path": "openbench",
         "compilers": [
             "g++"
         ],
