@@ -53,7 +53,7 @@ def parse_stream_output(stream):
 
         # Multiple methods, including Ethereal and Stockfish
         nps_pattern   = r'nps\s+\d+'
-        bench_pattern = r'nodes\s+\d'
+        bench_pattern = r'nodes\s+\d+'
 
         # Search for and set only once the NPS and Bench values
         re_nps = re.search(nps_pattern, line, re.IGNORECASE)
